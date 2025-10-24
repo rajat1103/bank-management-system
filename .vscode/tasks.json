@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build mysql app",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-I", "mysql-connector-cpp/include",
+        "-L", "mysql-connector-cpp/lib64",
+        "main.cpp",
+        "-o", "main.exe",
+        "-lmysqlcppconn8"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+
